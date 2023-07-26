@@ -136,19 +136,19 @@ LOLCODE 目前识别的变量类型是：字符串 （YARN）、整数 （NUMBR�
 
 两个布尔值 (TROOF) 是 WIN (true) 和 FAIL (false)。空字符串 ("")、空数组和数字零都将转换为 FAIL。所有其他值的计算结果均为 WIN。
 
-### Numerical Types
+### 数值类型
 
-A NUMBR is an integer as specified in the host implementation/architecture. Any contiguous sequence of digits outside of a quoted YARN and not containing a decimal point (.) is considered a NUMBR. A NUMBR may have a leading hyphen (-) to signify a negative number.
+NUMBR是主机实现/体系结构中指定的整数。引号YARN之外的任何连续数字序列，如果不包含小数点（.），都被视为NUMBR。NUMBR可能有一个前导连字符（-）来表示负数。
 
-A NUMBAR is a float as specified in the host implementation/architecture. It is represented as a contiguous string of digits containing exactly one decimal point. Casting a NUMBAR to a NUMBR truncates the decimal portion of the floating point number. Casting a NUMBAR to a YARN (by printing it, for example), truncates the output to a default of two decimal places. A NUMBAR may have a leading hyphen (-) to signify a negative number.
+NUMBAR是宿主实现/体系结构中指定的浮点数。它表示为恰好包含一个小数点的连续字符串。将NUMBAR转换为NUMBR会截断浮点数的小数部分。将NUMBAR转换为YARN（例如，通过打印它），会将输出截断为默认的两位小数。NUMBAR可能有一个前导连字符（-）来表示负数。
 
-Casting of a string to a numerical type parses the string as if it were not in quotes. If there are any non-numerical, non-hyphen, non-period characters, then it results in an error. Casting WIN to a numerical type results in "1" or "1.0"; casting FAIL results in a numerical zero.
+将字符串转换为数字类型会像不在引号中一样解析字符串。如果有任何非数字、非连字符、非句点字符，则会导致错误。将WIN转换为数字类型会导致“1”或“1.0”；将FAIL转换为数字零。
 
-### Strings
+### 字符串
 
-String literals (YARN) are demarked with double quotation marks ("). Line continuation and soft-command-breaks are ignored inside quoted strings. An unterminated string literal (no closing quote) will cause an error.
+字符串文本 （YARN） 用双引号 （“） 表示。在带引号的字符串中忽略行继续和软命令中断。未终止的字符串文本（无右引号）将导致错误。
 
-Within a string, all characters represent their literal value except the colon (:), which is the escape character. Characters immediately following the colon also take on a special meaning.
+在字符串中，所有字符都表示其文本值，但冒号 （:)除外，冒号 （ 是转义字符。紧跟在冒号后面的字符也具有特殊含义。
 
 * :) represents a newline (\n)
 * :> represents a tab (\t)
@@ -156,7 +156,7 @@ Within a string, all characters represent their literal value except the colon (
 * :" represents a literal double quote (")
 * :: represents a single literal colon (:)
 
-The colon may also introduce more verbose escapes enclosed within some form of bracket.
+冒号也可能引入更冗长的转义，括在某种形式的括号内。
 
 * :(`<hex>`) resolves the hex number into the corresponding Unicode code point.
 * :{`<var>`} interpolates the current value of the enclosed variable, cast as a string.
