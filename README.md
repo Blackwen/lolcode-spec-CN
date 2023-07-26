@@ -4,3 +4,4 @@
 
 目前还在努力翻译中（Google 机翻过于生草，所以需要时间优化）
 
+官方仓库:https://github.com/justinmeza/lolcode-spec
