@@ -162,15 +162,15 @@ NUMBAR是宿主实现/体系结构中指定的浮点数。它表示为恰好包�
 * :{`<var>`} interpolates the current value of the enclosed variable, cast as a string.
 * :[`<char name>`] resolves the `<char name>` in capital letters to the corresponding Unicode [normative name](http://www.unicode.org/Public/4.1.0/ucd/NamesList.txt).
 
-### Arrays
+### 数组
 
-*Array and dictionary types are currently under-specified. There is general will to unify them, but indexing and definition is still under discussion.*
+*数组和字典类型当前未指定。人们普遍愿意统一它们，但索引和定义仍在讨论中。*
 
-### Types
+### 类型
 
-The TYPE type only has the values of TROOF, NOOB, NUMBR, NUMBAR, YARN, and TYPE, as bare words. They may be legally cast to TROOF (all true except for NOOB) or YARN.
+TYPE 类型仅具有 TROOF、NOOB、NUMBR、NUMBAR、YARN 和 TYPE 的值，作为裸词。他们可以合法地投射到TROOF（除了菜鸟之外都是真的）或YARN
 
-*TYPEs are under current review. Current sentiment is to delay defining them until user-defined types are relevant, but that would mean that type comparisons are left unresolved in the meantime.*
+*类型正在审查中。当前的观点是延迟定义它们，直到用户定义的类型相关，但这意味着在此期间无法解决类型比较。*
 
 ---
 
