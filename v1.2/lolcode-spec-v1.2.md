@@ -174,25 +174,26 @@ TYPE 类型仅具有 TROOF、NOOB、NUMBR、NUMBAR、YARN 和 TYPE 的值，作�
 
 ---
 
-## Operators
+## 运营商
 
-### Calling Syntax and Precedence
+### 调用语法和优先级
 
-Mathematical operators and functions in general rely on prefix notation. By doing this, it is possible to call and compose operations with a minimum of explicit grouping. When all operators and functions have known arity, no grouping markers are necessary. In cases where operators have variable arity, the operation is closed with `MKAY`. An `MKAY` may be omitted if it coincides with the end of the line/statement, in which case the EOL stands in for as many `MKAYs` as there are open variadic functions.
+数学运算符和函数通常依赖于前缀表示法。通过这样做，可以使用最少的显式分组来调用和组合操作。当所有运算符和函数都具有已知的 arity 时，不需要分组标记。在操作员具有可变Arity的情况下，操作以`MKAY`关闭。如果`MKAY`与行/语句的末尾重合，则可以省略，在这种情况下，EOL 代表与开放可变参数函数一样多的`MKAY`。
 
-Calling unary operators then has the following syntax:
+然后调用一元运算符具有以下语法：
 
 ```
 <operator> <expression1>
 ```
 
-The `AN` keyword can optionally be used to separate arguments, so a binary operator expression has the following syntax:
+可以选择使用`AN`关键字来分隔参数，因此二进制运算符表达式具有以下语法：
 
 ```
 <operator> <expression1> [AN] <expression2>
 ```
 
-An expression containing an operator with infinite arity can then be expressed with the following syntax:
+然后，可以使用以下语法表示包含具有无限 arity 运算符的表达式：
+
 
 ```
 <operator> <expr1> [[[AN] <expr2>] [AN] <expr3> ...] MKAY
